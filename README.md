@@ -1,3 +1,3 @@
-# portfolio-static
 # Personal website 
-check my website ## nismal.in
+check my website 
+## nismal.in
