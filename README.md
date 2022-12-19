@@ -1,3 +1,3 @@
 # Personal website 
 check my website 
-## nismal.in
+All of my projects are available at [nismal.in](nismal.in)
