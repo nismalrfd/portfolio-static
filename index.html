@@ -56,10 +56,10 @@
             <div class="about-data">
                 <span>about me</span>
                 <h3>web developer</h3>
-                <a href="#skills" class="btn btn-primary">time line</a>
+                <a href="#skills" class="btn btn-primary">SKILLS</a>
             </div>
             <div class="about-text">
-                <p>I am a self-taught Full Stack Web-Developer from calicut .</p> 
+                <p>I am a self-taught Web-Developer from calicut .</p> 
                 <p>After degree education i found my passion for coding and web-Dev 
                     and want to restart a solid career in Tech & make awesome things with Tech .
                 </p>
@@ -135,7 +135,7 @@
 <section class="portfolio container" id="portfolio">
     <h2 class="heading">Portfolio</h2>
     <div class="portfolio-content">
-        <div class="portfolio-box">
+        <!-- <div class="portfolio-box">
             <img src="img/project1.jpg" alt="" class="portfolio-img">
             <div class="portfolio-overlay">
                 <h2>web debde</h2>
@@ -144,53 +144,76 @@
                     <i class="bx bx-link-alt"></i>
                 </a>
             </div>
+        </div> -->
+        <div class="portfolio-box">
+            <a href="https://github.com/nismalrfd/techturtles">
+            <img src="img/1.png" alt="" class="portfolio-img">
+            </a>
+            <div class="portfolio-overlay">
+                <h2>Tech Turtles</h2>
+                <p>Is a question and answer website</p>
+                <a href="https://github.com/nismalrfd/techturtles">
+                    <i class="bx bx-link-alt"></i>
+                </a>
+                    <!-- <i class="bx bx-link-alt"></i> -->
+            </div>
         </div>
         <div class="portfolio-box">
-            <img src="img/project3.jpg" alt="" class="portfolio-img">
+            <a href="https://github.com/nismalrfd/portfolio-static">
+            <img src="img/2 (2).png" alt="" class="portfolio-img">
+            </a>
             <div class="portfolio-overlay">
-                <h2>web debde</h2>
-                <p>dkfskfkskds  njnj</p>
-                <a href="#">
+                <h2>Personal website</h2>
+                <p>Is a static personal portfolio</p>
+                <a href="https://github.com/nismalrfd/portfolio-static">
                     <i class="bx bx-link-alt"></i>
                 </a>
             </div>
         </div>
         <div class="portfolio-box">
-            <img src="img/project4.jpg" alt="" class="portfolio-img">
+            <a href="https://github.com/nismalrfd/todo_list_with_userauthentication">
+            <img src="img/3.jpg" alt="" class="portfolio-img">
+            </a>
             <div class="portfolio-overlay">
-                <h2>web debde</h2>
-                <p>dkfskfkskds  njnj</p>
-                <a href="#">
+                <h2>Todo App</h2>
+                <p>To Do list app with User Registration</p>
+                <a href="https://github.com/nismalrfd/todo_list_with_userauthentication">
                     <i class="bx bx-link-alt"></i>
                 </a>
             </div>
         </div>
         <div class="portfolio-box">
-            <img src="img/project3.jpg" alt="" class="portfolio-img">
+            <a href="https://github.com/nismalrfd/weather_app">
+            <img src="img/5.JPG" alt="" class="portfolio-img">
+            </a>
             <div class="portfolio-overlay">
-                <h2>web debde</h2>
-                <p>dkfskfkskds  njnj</p>
-                <a href="#">
+                <h2>Weather App</h2>
+                <p>Scrape Weather Data from Google</p>
+                <a href="https://github.com/nismalrfd/weather_app">
                     <i class="bx bx-link-alt"></i>
                 </a>
             </div>
         </div>
         <div class="portfolio-box">
-            <img src="img/project1.jpg" alt="" class="portfolio-img">
+            <a href="https://github.com/nismalrfd/CRUD-list">
+            <img src="img/4.jpg" alt="" class="portfolio-img">
+            </a>
             <div class="portfolio-overlay">
-                <h2>web debde</h2>
-                <p>dkfskfkskds  njnj</p>
-                <a href="#">
+                <h2>CRUD-list</h2>
+                <p>CRUD operations To Do list app</p>
+                <a href="https://github.com/nismalrfd/CRUD-list">
                     <i class="bx bx-link-alt"></i>
                 </a>
             </div>
         </div>
         <div class="portfolio-box">
-            <img src="img/project2.jpg" alt="" class="portfolio-img">
+            <a href="https://nismalrfd.github.io/nismalrfd-YouTube-responsive-design/">
+            <img src="img/7.JPG" alt="" class="portfolio-img">
+            </a>
             <div class="portfolio-overlay">
-                <h2>web debde</h2>
-                <p>dkfskfkskds  njnj</p>
-                <a href="#">
+                <h2>YouTube</h2>
+                <p>YouTube-responsive-design</p>
+                <a href="https://nismalrfd.github.io/nismalrfd-YouTube-responsive-design/">
                     <i class="bx bx-link-alt"></i>
                 </a>
             </div>
@@ -255,6 +278,21 @@
         {
             emailjs.init("H415WFfzp8KzpnUBC");
         })();
+
+        $(function () {
+
+		$(".col-md-4").slice(0, 3).show();
+		$("body").on('click touchstart', '.load-more', function (e) {
+			e.preventDefault();
+			$(".col-md-4:hidden").slice(0, 3).slideDown();
+			if ($(".col-md-4:hidden").length == 0) {
+				$(".load-more").css('visibility', 'hidden');
+			}
+			$('html,body').animate({
+				scrollTop: $(this).offset().top
+			}, 1000);
+		});
+	});
     </script>
     <!-- link to js -->
     <script src="Script.js"></script>

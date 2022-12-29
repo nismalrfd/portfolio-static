@@ -344,6 +344,7 @@ span{
 
   }
   
+  
   .btn:is(:hover, :focus-visible) { background-position: right; }
   
   .btn-primary {
@@ -352,6 +353,7 @@ span{
 
   }
   .about-text p{
+    color: var( --text-shadow-blue);
     font-size: 0.938rem;
     letter-spacing: 1px;
     text-align: justify;
@@ -431,6 +433,7 @@ span{
     font-size: 0.9rem;
   }
 /* portfolio */
+
 .portfolio-content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -438,6 +441,7 @@ span{
   
 }
 .portfolio-box{
+    height: 325px;
     background-color: var(--bg-oxford-blue);
     border: 1px solid var(--border-prussian-blue);
     border-radius:10px;
@@ -455,14 +459,15 @@ span{
     padding: 20px;
 }
 .portfolio-overlay h2{
-    font-size: 1.6rem;
+    color: var(--text-columbia-blue);
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 10px;
     margin-left: 2rem;
 }
 
 .portfolio-overlay p{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 300;
     margin-bottom: 10px;
     margin-left: 2rem;
