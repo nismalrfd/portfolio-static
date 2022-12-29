@@ -134,6 +134,11 @@
 </section>
 <section class="portfolio container" id="portfolio">
     <h2 class="heading">Portfolio</h2>
+    <div class="ul" >
+        <button  class="list active" data-filter="all">all</button>
+        <button class="list" data-filter="f">Back-end</button>
+        <button class="list" data-filter="b">Front End</button>
+    </div>
     <div class="portfolio-content">
         <!-- <div class="portfolio-box">
             <img src="img/project1.jpg" alt="" class="portfolio-img">
@@ -145,7 +150,7 @@
                 </a>
             </div>
         </div> -->
-        <div class="portfolio-box">
+        <div class="portfolio-box" data-item="f">
             <a href="https://github.com/nismalrfd/techturtles">
             <img src="img/1.png" alt="" class="portfolio-img">
             </a>
@@ -158,7 +163,7 @@
                     <!-- <i class="bx bx-link-alt"></i> -->
             </div>
         </div>
-        <div class="portfolio-box">
+        <div class="portfolio-box" data-item="f">
             <a href="https://github.com/nismalrfd/portfolio-static">
             <img src="img/2 (2).png" alt="" class="portfolio-img">
             </a>
@@ -170,7 +175,7 @@
                 </a>
             </div>
         </div>
-        <div class="portfolio-box">
+        <div class="portfolio-box" data-item="f">
             <a href="https://github.com/nismalrfd/todo_list_with_userauthentication">
             <img src="img/3.jpg" alt="" class="portfolio-img">
             </a>
@@ -182,7 +187,7 @@
                 </a>
             </div>
         </div>
-        <div class="portfolio-box">
+        <div class="portfolio-box" data-item="b">
             <a href="https://github.com/nismalrfd/weather_app">
             <img src="img/5.JPG" alt="" class="portfolio-img">
             </a>
@@ -194,7 +199,7 @@
                 </a>
             </div>
         </div>
-        <div class="portfolio-box">
+        <div class="portfolio-box"data-item="b">
             <a href="https://github.com/nismalrfd/CRUD-list">
             <img src="img/4.jpg" alt="" class="portfolio-img">
             </a>
@@ -206,7 +211,7 @@
                 </a>
             </div>
         </div>
-        <div class="portfolio-box">
+        <div class="portfolio-box" data-item="b">
             <a href="https://nismalrfd.github.io/nismalrfd-YouTube-responsive-design/">
             <img src="img/7.JPG" alt="" class="portfolio-img">
             </a>
@@ -279,20 +284,33 @@
             emailjs.init("H415WFfzp8KzpnUBC");
         })();
 
-        $(function () {
+        let list =document.querySelectorAll(".list");
+        let portfolio =document.querySelectorAll(".portfolio-box");
 
-		$(".col-md-4").slice(0, 3).show();
-		$("body").on('click touchstart', '.load-more', function (e) {
-			e.preventDefault();
-			$(".col-md-4:hidden").slice(0, 3).slideDown();
-			if ($(".col-md-4:hidden").length == 0) {
-				$(".load-more").css('visibility', 'hidden');
-			}
-			$('html,body').animate({
-				scrollTop: $(this).offset().top
-			}, 1000);
-		});
-	});
+        for (let i = 0; i<list.length;i++){
+            list[i].addEventListener('click',function(){
+                for(let j=0;j<list.length; j++){
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k=0; k<portfolio.length; k++){
+                    portfolio[k].classList.remove('active');
+                    portfolio[k].classList.add('hide');
+
+
+                    if(portfolio[k].getAttribute('data-item') == dataFilter || dataFilter == "all"){
+                        portfolio[k].classList.remove('hide');
+                        portfolio[k].classList.add('active');
+
+
+
+                    }
+                }
+            })
+        }
+
     </script>
     <!-- link to js -->
     <script src="Script.js"></script>

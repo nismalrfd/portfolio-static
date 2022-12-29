@@ -440,6 +440,10 @@ span{
     gap: 2rem;
   
 }
+.portfolio-box.hide{
+  display: none;
+
+}
 .portfolio-box{
     height: 325px;
     background-color: var(--bg-oxford-blue);
@@ -449,6 +453,38 @@ span{
     border-radius: 1rem;
 
 }
+.ul{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  margin-bottom: 20px;
+}
+.list{}
+.ul .list{
+  border-radius: 9px;
+  width: 73px;
+  height: 40px;
+  list-style: none;
+  background: var( --bg-oxford-blue);
+  color: #ffffff;
+  font-size: 10px;
+  margin: 5px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  
+}
+.ul .list.active{
+  transition: var(--transition-1);
+  background-image: var(--gradient-2);
+  color: var(--white);
+  background-size: 200%;
+
+}
+.list:is(:hover, :focus-visible) { background-position: right; }
+
+
 
 .portfolio-img{
     width: 100%;
@@ -479,6 +515,8 @@ span{
     border-radius: 4px;
     color: #004666;
     margin-left: 2rem;
+    transition-delay: 2s ;
+
 }
 .portfolio .bx:hover{
     background: var(--text-alice-blue);
