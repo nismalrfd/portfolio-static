@@ -28,14 +28,14 @@
   --bg-wild-blue-yonder: hsla(216, 33%, 68%, 1);
   --bg-carolina-blue: #0ea6ec;
   --bg-prussian-blue: hsla(216, 33%, 20%, 1);
-  --bg-oxford-blue: hsla(222, 44%, 13%, 1);
-  --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
+  --bg-oxford-blue: rgb(255, 255, 255);
+  --bg-oxford-blue-2: rgb(255, 255, 255);
 
   /** Text colors */
-  --text-white: hsla(0, 0%, 100%, 1);
-  --text-alice-blue: hsla(216, 100%, 95%, 1);
-  --text-columbia-blue: hsla(199, 69%, 84%, 1);
-  --text-wild-blue-yonder: hsla(216, 33%, 68%, 1);
+  --text-white: rgb(8, 0, 52);
+  --text-alice-blue: rgb(0, 34, 81);
+  --text-columbia-blue: rgb(119, 214, 255);
+  --text-wild-blue-yonder: rgb(15, 46, 93);
   --text-carolina-blue: hsla(199, 89%, 49%, 1);
   --text-shadow-blue: hsla(217, 24%, 59%, 1);
   --text-slate-gray: hsla(217, 17%, 48%, 1);
