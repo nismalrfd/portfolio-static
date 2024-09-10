@@ -152,14 +152,16 @@ span{
 .scroll-top .bx{
     padding: 8px;
     font-weight: 1.3rem;
-    color: var(--bg-carolina-blueb);
-    background-image: var(--gradient-2);
+    color: var(--white);    
+    /* background-image: var(--gradient-2); */
+    background-color: #0ea5ea;
     border-radius: 1.2rem;
 
 }
 .scroll-top .bx:hover{
-    background-image: var(--gradient-2);
-    color: var(--white);    
+    /* background-image: var(--gradient-2); */
+    color: var(--bg-carolina-blueb);
+
     transition: 0.3;
 }
 .scroll-active{
@@ -283,12 +285,12 @@ span{
     font-size: 1.3rem;
     padding: 10px;
     border-radius: 50%;
-    color: var(--text-white);
+    color:var(--bg-oxford-blue);
     background: var(--bg-prussian-blue);
 
 }
 .social .bx:hover{
-    background: var(--text-slate-gray);
+    background: var(--text-columbia-blue);
     transition: 0.3s all linear;
 }
 
@@ -466,8 +468,9 @@ span{
   width: 73px;
   height: 40px;
   list-style: none;
-  background: var( --bg-oxford-blue);
-  color: #ffffff;
+  /* background: var( --bg-oxford-blue); */
+  background-color:var(--bg-wild-blue-yonder);
+  color:white;
   font-size: 10px;
   margin: 5px;
   letter-spacing: 1px;
