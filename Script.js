@@ -88,7 +88,11 @@ function topFunction() {
 
 
 // loader
+
 var preloder = document.getElementById('loading');
+
 function loader(){
-    preloder.style.display = 'none';
+    setTimeout(function(){
+        preloder.style.display = 'none';
+    }, 5000); // Delay of 5000 milliseconds (5 seconds)
 }
